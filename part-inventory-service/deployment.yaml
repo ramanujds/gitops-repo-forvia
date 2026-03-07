@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: part-inventory-service
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: part-inventory-service
