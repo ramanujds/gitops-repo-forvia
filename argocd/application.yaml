@@ -8,7 +8,7 @@ spec:
     namespace: default
     server: https://kubernetes.default.svc
   source:
-    path: part-inventory-service
+    path: inventory-order-chart
     repoURL: https://github.com/ramanujds/gitops-repo-forvia
     targetRevision: HEAD
   sources: []
