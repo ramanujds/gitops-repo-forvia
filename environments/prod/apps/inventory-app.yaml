@@ -1,16 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: order-service
+  name: inventory-service
   namespace: argocd
 spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
   source:
-    path: order-app-chart
+    path: inventory-app-chart
     repoURL: https://github.com/ramanujds/gitops-repo-forvia
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - ../../environments/prod/values/inventory-values.yaml
   sources: []
   project: default
   syncPolicy:
