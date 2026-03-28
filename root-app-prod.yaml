@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: inventory-otrder-app
+  name: inventory-otrder-app-prod
   namespace: argocd
 spec:
   destination:

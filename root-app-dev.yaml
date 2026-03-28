@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: inventory-otrder-app
+  name: inventory-otrder-app-dev
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: dev
     server: https://kubernetes.default.svc
   source:
     path: environments/dev/apps

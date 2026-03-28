@@ -7,14 +7,16 @@ spec:
   destination:
     namespace: dev
     server: https://kubernetes.default.svc
-  source:
-    path: inventory-app-chart
-    repoURL: https://github.com/ramanujds/gitops-repo-forvia
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-        - ../../environments/dev/values/inventory-values.yaml
-  sources: []
+  sources:
+    - path: inventory-app-chart
+      repoURL: https://github.com/ramanujds/gitops-repo-forvia
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+          - $values/environments/dev/values/inventory-values.yaml
+    - repoURL: https://github.com/ramanujds/gitops-repo-forvia
+      targetRevision: HEAD
+      ref: values
   project: default
   syncPolicy:
     automated:
