@@ -13,7 +13,7 @@ partInventory:
   replicaCount: 1
   image:
     repository: ram1uj/part-inventory-service
-    tag: "${IMAGE_TAG}"
+    tag: "latest"
     pullPolicy: Always
   service:
     type: ClusterIP

@@ -3,6 +3,13 @@ kind: Application
 metadata:
   name: order-service-prod
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: order=ram1uj/part-order-service
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: helmvalues:environments/prod/values/order-values.yaml
+    argocd-image-updater.argoproj.io/order.helm.image-name: partOrder.image.repository
+    argocd-image-updater.argoproj.io/order.helm.image-tag: partOrder.image.tag
+    argocd-image-updater.argoproj.io/order.update-strategy: newest-build
 spec:
   destination:
     namespace: default
@@ -12,6 +19,7 @@ spec:
       repoURL: https://github.com/ramanujds/gitops-repo-forvia
       targetRevision: HEAD
       helm:
+        releaseName: order-service
         valueFiles:
           - $values/environments/prod/values/order-values.yaml
     - repoURL: https://github.com/ramanujds/gitops-repo-forvia
