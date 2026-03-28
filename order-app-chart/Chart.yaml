@@ -1,5 +1,5 @@
 apiVersion: v2
-name: inventory-order
+name: order-app-chart
 description: Helm chart for part-gateway, part-inventory-service, and part-order-service
 type: application
 version: 0.1.0
