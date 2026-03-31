@@ -12,7 +12,7 @@ partInventory:
   enabled: true
   replicaCount: 1
   image:
-    repository: ram1uj/part-inventory-service
+    repository: ram1uj/easy-recipes
     tag: ""
     pullPolicy: Always
   service:
