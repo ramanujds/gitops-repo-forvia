@@ -13,7 +13,7 @@ partInventory:
   replicaCount: 1
   image:
     repository: ram1uj/easy-recipes
-    tag: ""
+    tag: "latest"
     pullPolicy: Always
   service:
     type: NodePort
