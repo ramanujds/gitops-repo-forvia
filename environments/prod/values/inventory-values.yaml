@@ -13,7 +13,7 @@ partInventory:
   replicaCount: 1
   image:
     repository: ram1uj/part-inventory-service
-    tag: 6
+    tag: 7
     pullPolicy: Always
   service:
     type: NodePort
